@@ -1,0 +1,34 @@
+Conduct exploratory data analysis to identify crucial features that will be utilized in the model.
+Exploratory data analysis (EDA) is a critical step in any machine learning project. Here are some steps you could take to conduct EDA on this dataset:
+
+Load the dataset into a pandas DataFrame
+Check the shape of the DataFrame to see how many rows and columns there are
+Check the data types of each column to make sure they are correctly interpreted by pandas
+Check for missing values and decide on a strategy for handling them (e.g., impute with the mean, median, or mode, or drop the rows/columns containing missing values)
+Check the distribution of each numeric feature by computing summary statistics (e.g., mean, median, standard deviation, min, max) and visualizing the data using histograms or box plots
+Check the cardinality of each categorical feature (i.e., how many unique values it has) and decide on a strategy for handling them (e.g., one-hot encoding, label encoding, or dropping the column if it has too many unique values)
+Check for correlations between features using scatter plots or heatmaps, and decide on a strategy for handling multicollinearity (e.g., dropping one of the correlated features or using regularization)
+Check for outliers and decide on a strategy for handling them (e.g., removing them or transforming the data using log or power functions)
+Based on the EDA, some potentially useful features for predicting the price of used cars could be:
+
+brand
+model
+yearOfRegistration
+fuelType
+gearbox
+kilometer
+powerPS
+Please justify the selection of these features and aim to incorporate as many as possible.
+These features were selected based on their potential impact on the price of a used car. For example, the brand and model of a car are often strong indicators of its value, as are its year of registration and odometer reading (kilometer). Fuel type, gearbox, and horsepower (powerPS) may also be factors that influence the price.
+
+To incorporate these features, you would need to preprocess the data by encoding categorical variables (e.g., one-hot encoding for brand, model, fuelType, and gearbox) and scaling numerical variables (e.g., using standardization or normalization for yearOfRegistration, kilometer, and powerPS).
+
+Kindly identify any potential challenges or limitations you anticipate/encounter during the feature selection process. (if any)
+Some potential challenges or limitations of the feature selection process could include:
+
+Missing data: If the dataset contains a lot of missing values, it may be difficult to select features that are informative and don't introduce bias. You may need to impute missing values or drop rows/columns with missing values.
+Outliers: If the dataset contains outliers, they can skew the results of EDA and make it difficult to select features that generalize well. You may need to remove outliers or use robust statistics to mitigate their impact.
+Multicollinearity: If some features are highly correlated with each other, it can make it difficult to interpret the impact of individual features on the target variable. You may need to drop one of the correlated features or use regularization techniques to avoid overfitting.
+Limited data: If the dataset is small, it may be difficult to select features that generalize well to new data. You may need to use cross-validation or other techniques to evaluate the performance of different feature subsets.
+(Bonus) Try to propose a good model you feel would be able to best fit the features you have selected to make predictions.
+One possible model that could be used for this task is a regression model, such as linear regression random forest regression
